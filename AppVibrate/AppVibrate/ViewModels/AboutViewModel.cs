@@ -14,13 +14,5 @@ namespace AppVibrate.ViewModels
         }
 
         public ICommand OpenWebCommand { get; }
-
-        public ICommand StartVibration()
-        {
-            var duration = TimeSpan.FromSeconds(10);
-            return new Command(() => Vibration.Vibrate(duration));
-        }
-
-        public ICommand StopVibration => new Command(() => Vibration.Cancel());
     }
 }
